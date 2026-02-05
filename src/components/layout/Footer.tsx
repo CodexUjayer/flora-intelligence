@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Github, Twitter, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
@@ -11,10 +12,15 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="space-y-8">
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-10 h-10 bg-gradient-to-tr from-accent-cyan to-accent-indigo rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                <span className="text-white font-black text-xl">F</span>
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg group-hover:scale-110 transition-transform bg-slate-100">
+                <Image 
+                  src="/logo.jpg" 
+                  alt="Flora Logo" 
+                  fill 
+                  className="object-cover"
+                />
               </div>
-              <span className="text-2xl font-black tracking-tighter text-slate-950 italic">
+              <span className="text-2xl font-extrabold tracking-tight text-slate-950">
                 Flora
               </span>
             </Link>
@@ -76,7 +82,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-100 pt-10 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-          <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.1em] text-center md:text-left">
+          <p className="text-slate-400 text-[10px] font-extrabold uppercase tracking-[0.1em] text-center md:text-left">
             © {currentYear} Flora Intelligence Inc. All rights reserved.
           </p>
           <div className="flex space-x-8">

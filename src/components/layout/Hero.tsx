@@ -27,31 +27,31 @@ export default function Hero() {
             <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-accent-cyan/10 border border-accent-cyan/20 mb-8 shadow-sm">
               <Zap className="w-4 h-4 text-accent-cyan animate-pulse" />
               <span className="text-xs font-bold uppercase tracking-widest text-accent-cyan">
-                Predictive AI for Modern Enterprise
+                AI That Helps You Grow
               </span>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-[84px] font-black tracking-tighter mb-8 leading-[0.95] text-slate-950 italic">
-              Data Science, <br />
+            <h1 className="text-5xl md:text-7xl lg:text-[84px] font-extrabold tracking-tight mb-8 leading-[0.95] text-slate-950">
+              We turn data
+              <br />
+              into clear <br />
               <motion.span 
-                whileHover={{ skewX: [0, -10, 10, 0], x: [0, -2, 2, 0] }}
+                whileHover={{ skewX: [0, -5, 5, 0], x: [0, -1, 1, 0] }}
                 transition={{ duration: 0.2 }}
                 className="text-gradient inline-block"
               >
-                Intelligent
-              </motion.span> <br />
-              Scaled.
+                Decisions
+              </motion.span>.
             </h1>
 
             <p className="text-lg md:text-xl text-slate-600 max-w-xl mb-10 leading-relaxed font-medium">
-              Flora Intelligence transforms raw data into strategic board-level decisions. 
-              We build the models that drive your next stage of growth.
+              We help businesses use AI to solve real problems. Stop guessing and start knowing what comes next.
             </p>
 
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 mb-10 w-full lg:w-auto">
               <Magnetic distance={0.2}>
                 <Link
                   href="/contact"
-                  className="px-10 py-5 bg-slate-950 text-white font-black uppercase tracking-widest text-xs rounded-2xl shadow-2xl hover:scale-105 transition-all flex items-center justify-center group"
+                  className="px-10 py-5 bg-slate-950 text-white font-extrabold uppercase tracking-widest text-xs rounded-2xl shadow-2xl hover:scale-105 transition-all flex items-center justify-center group"
                 >
                   Join the Network
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />

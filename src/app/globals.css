@@ -11,8 +11,9 @@
   --color-slate-850: #1E293B;
   --color-slate-950: #020617;
 
-  --font-sans: "Inter", var(--font-geist-sans), sans-serif;
-  --font-mono: var(--font-geist-mono), monospace;
+  --font-sans: var(--font-plus-jakarta), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
 
   --background-glass: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
   
@@ -30,6 +31,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: var(--font-body);
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

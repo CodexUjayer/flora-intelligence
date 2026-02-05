@@ -55,7 +55,7 @@ export default function ContactPage() {
       <section className="pt-40 pb-20 bg-white">
         <Container>
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-8xl font-black mb-8 italic text-slate-950 leading-tight">
+            <h1 className="text-5xl md:text-8xl font-extrabold mb-8 text-slate-950 leading-tight tracking-tight">
               Let's <br />
               <span className="text-gradient">Collaborate</span>.
             </h1>
@@ -72,7 +72,7 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="lg:col-span-5 space-y-16">
                <div>
-                  <h3 className="text-3xl font-black mb-10 text-slate-950">Get in Touch</h3>
+                  <h3 className="text-3xl font-extrabold mb-10 text-slate-950">Get in Touch</h3>
                   <div className="space-y-8">
                      <div className="flex items-start space-x-6">
                         <div className="w-14 h-14 rounded-2xl bg-white text-accent-cyan flex items-center justify-center shrink-0 shadow-premium border border-slate-100">
@@ -135,7 +135,7 @@ export default function ContactPage() {
                         <div className="w-24 h-24 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto mb-8 shadow-premium">
                            <CheckCircle2 size={48} />
                         </div>
-                        <h2 className="text-4xl font-black text-slate-950 mb-4">Message Sent!</h2>
+                        <h2 className="text-4xl font-extrabold text-slate-950 mb-4">Message Sent!</h2>
                         <p className="text-slate-500 font-medium text-lg mb-10 leading-relaxed">Thank you for reaching out. A strategy expert will contact you within 24 hours.</p>
                         <button 
                           onClick={() => setSubmitted(false)}

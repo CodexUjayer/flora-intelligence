@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
-
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -49,11 +49,16 @@ export default function Navbar() {
             <motion.div 
               animate={{ rotate: logoRotation }}
               transition={{ type: "spring", stiffness: 200, damping: 10 }}
-              className="w-10 h-10 bg-gradient-to-tr from-accent-cyan to-accent-indigo rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform"
+              className="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg group-hover:scale-110 transition-transform bg-slate-100"
             >
-              <span className="text-white font-black text-xl">F</span>
+              <Image 
+                src="/logo.jpg" 
+                alt="Flora Logo" 
+                fill 
+                className="object-cover"
+              />
             </motion.div>
-            <span className="text-2xl font-black tracking-tighter text-slate-950 italic">
+            <span className="text-2xl font-extrabold tracking-tight text-slate-950">
               Flora<span className="text-accent-cyan">.</span>
             </span>
           </Link>
@@ -109,7 +114,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="text-2xl font-black text-slate-950 tracking-tight"
+                  className="text-2xl font-extrabold text-slate-950 tracking-tight"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
@@ -117,7 +122,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="/contact"
-                className="w-full py-5 bg-slate-950 text-white rounded-2xl text-center font-black uppercase tracking-widest text-sm shadow-xl"
+                className="w-full py-5 bg-slate-950 text-white rounded-2xl text-center font-extrabold uppercase tracking-widest text-sm shadow-xl"
                 onClick={() => setIsOpen(false)}
               >
                 Get Started

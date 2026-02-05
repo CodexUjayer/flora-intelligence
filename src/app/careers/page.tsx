@@ -113,7 +113,7 @@ export default function CareersPage() {
       <section className="pt-40 pb-20 bg-white">
         <Container>
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-[84px] font-black mb-8 text-slate-950 leading-[0.9] italic tracking-tighter">
+            <h1 className="text-5xl md:text-[84px] font-extrabold mb-8 text-slate-950 leading-[0.9] tracking-tight">
               Join the <br />
               <span className="text-gradient">Future</span> of AI.
             </h1>
@@ -154,7 +154,7 @@ export default function CareersPage() {
                        <span className="px-4 py-1.5 bg-accent-cyan/10 text-accent-cyan text-[10px] font-black rounded-full uppercase tracking-widest">{job.department}</span>
                        <span className="text-slate-400 text-xs font-bold flex items-center"><Clock className="w-3.5 h-3.5 mr-1.5" /> {job.type}</span>
                     </div>
-                    <h3 className="text-2xl font-black text-slate-950 mb-3 group-hover:text-accent-cyan transition-colors italic tracking-tight">{job.role}</h3>
+                    <h3 className="text-2xl font-extrabold text-slate-950 mb-3 group-hover:text-accent-cyan transition-colors tracking-tight">{job.role}</h3>
                     <div className="flex items-center text-slate-500 text-sm mb-6 font-medium">
                        <MapPin className="w-4 h-4 mr-1.5 text-slate-400" /> {job.location}
                     </div>
@@ -203,7 +203,7 @@ export default function CareersPage() {
                     <>
                       <div className="mb-10">
                         <span className="text-accent-cyan text-xs font-black uppercase tracking-[0.2em]">{selectedJob.department}</span>
-                        <h2 className="text-4xl font-black text-slate-950 mt-2 italic tracking-tighter">Apply for {selectedJob.role}</h2>
+                        <h2 className="text-4xl font-extrabold text-slate-950 mt-2 tracking-tight">Apply for {selectedJob.role}</h2>
                         <p className="text-slate-500 mt-4 font-medium">Fill out the form below to start your application.</p>
                       </div>
 

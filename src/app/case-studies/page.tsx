@@ -59,7 +59,7 @@ export default function CaseStudiesPage() {
       
       <section className="pt-40 pb-20 bg-white">
         <Container>
-           <h1 className="text-5xl md:text-8xl font-black mb-8 text-slate-950 leading-tight italic">
+           <h1 className="text-5xl md:text-8xl font-extrabold mb-8 text-slate-950 leading-tight tracking-tight">
              Our <span className="text-gradient">Impact</span>.
            </h1>
            <p className="text-slate-600 text-xl max-w-2xl leading-relaxed font-medium">
@@ -80,7 +80,7 @@ export default function CaseStudiesPage() {
                       <div className={`inline-block px-5 py-2 rounded-full bg-white shadow-sm border border-slate-100 text-${project.color} text-xs font-black mb-8 uppercase tracking-widest`}>
                          {project.impact}
                       </div>
-                      <h2 className="text-4xl md:text-5xl font-black mb-10 text-slate-950 tracking-tight leading-tight">{project.title}</h2>
+                      <h2 className="text-4xl md:text-5xl font-extrabold mb-10 text-slate-950 tracking-tight leading-tight">{project.title}</h2>
                       
                       <div className="space-y-10">
                          <div className="p-8 bg-white rounded-3xl border border-slate-100 shadow-sm">
@@ -104,7 +104,7 @@ export default function CaseStudiesPage() {
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
                          {project.metrics.map((metric) => (
                             <div key={metric.label} className="p-8 bg-white rounded-3xl border border-white text-center shadow-premium">
-                               <div className="text-3xl font-black text-slate-950 mb-1 tracking-tighter">{metric.value}</div>
+                               <div className="text-3xl font-extrabold text-slate-950 mb-1 tracking-tighter">{metric.value}</div>
                                <div className="text-slate-400 text-[10px] font-black uppercase tracking-[0.1em]">{metric.label}</div>
                             </div>
                          ))}
