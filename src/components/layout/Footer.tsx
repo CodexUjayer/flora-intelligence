@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Twitter, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Twitter, Linkedin, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -67,15 +67,11 @@ export default function Footer() {
             <ul className="space-y-6">
               <li className="flex items-start space-x-4 text-sm text-slate-500 font-medium leading-tight">
                 <MapPin size={20} className="text-accent-cyan shrink-0" />
-                <span>One Infinite Loop, San Francisco, CA 94111</span>
-              </li>
-              <li className="flex items-center space-x-4 text-sm text-slate-500 font-medium">
-                <Phone size={20} className="text-accent-cyan shrink-0" />
-                <span>+1 (555) 123-4567</span>
+                <span>500 West 2nd Street, Austin, TX 78701</span>
               </li>
               <li className="flex items-center space-x-4 text-sm text-slate-500 font-medium">
                 <Mail size={20} className="text-accent-cyan shrink-0" />
-                <span>hello@floraintelligence.ai</span>
+                <span>flora.intelligence@gmail.com</span>
               </li>
             </ul>
           </div>

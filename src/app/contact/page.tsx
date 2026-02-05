@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, MessageSquare, Linkedin, Twitter, Globe, CheckCircle2 } from "lucide-react";
+import { Mail, MapPin, Send, MessageSquare, Linkedin, Twitter, Globe, CheckCircle2 } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Container, Section } from "@/components/ui/Layout";
@@ -80,16 +80,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                            <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Email Us</div>
-                           <div className="text-xl text-slate-950 font-black">hello@floraintelligence.ai</div>
-                        </div>
-                     </div>
-                     <div className="flex items-start space-x-6">
-                        <div className="w-14 h-14 rounded-2xl bg-white text-accent-indigo flex items-center justify-center shrink-0 shadow-premium border border-slate-100">
-                           <Phone size={24} />
-                        </div>
-                        <div>
-                           <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Call Us</div>
-                           <div className="text-xl text-slate-950 font-black">+1 (555) 123-4567</div>
+                           <div className="text-xl text-slate-950 font-black">flora.intelligence@gmail.com</div>
                         </div>
                      </div>
                      <div className="flex items-start space-x-6">
@@ -98,7 +89,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                            <div className="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em] mb-1">Visit Us</div>
-                           <div className="text-xl text-slate-950 font-black">One Infinite Loop, San Francisco, CA 94111</div>
+                           <div className="text-xl text-slate-950 font-black">500 West 2nd Street, Austin, TX 78701</div>
                         </div>
                      </div>
                   </div>
