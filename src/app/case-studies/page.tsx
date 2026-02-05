@@ -109,7 +109,10 @@ export default function CaseStudiesPage() {
                             </div>
                          ))}
                       </div>
-                      <CaseStudyVisual id={project.id} />
+                      {/* Visual hidden on mobile to prevent overflow */}
+                      <div className="hidden lg:block">
+                        <CaseStudyVisual id={project.id} />
+                      </div>
                    </div>
                 </motion.div>
               ))}
