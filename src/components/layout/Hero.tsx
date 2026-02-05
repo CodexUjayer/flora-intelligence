@@ -81,8 +81,8 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Visuals */}
-          <div className="relative flex justify-center lg:justify-end py-10 lg:py-0">
+          {/* Right Column: Visuals - Hidden on mobile */}
+          <div className="hidden lg:flex relative justify-center lg:justify-end py-10 lg:py-0">
             {/* Device Container (No overflow-hidden here) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -90,19 +90,88 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative w-full max-w-[320px] aspect-[9/18.5] bg-slate-900 rounded-[50px] p-2 border-[8px] border-slate-800 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)]"
             >
-              {/* Inner Screen Mockup (Clip here only) */}
-              <div className="w-full h-full bg-slate-50 rounded-[40px] overflow-hidden p-6 relative group/screen">
+              {/* Inner Screen Mockup - Dashboard UI */}
+              <div className="w-full h-full bg-slate-50 rounded-[40px] overflow-hidden relative group/screen">
                 {/* Scanline Overlay */}
                 <div className="absolute inset-0 pointer-events-none z-50 opacity-[0.03] group-hover/screen:opacity-[0.07] transition-opacity duration-500 bg-[linear-gradient(to_bottom,transparent_50%,#000_50%)] bg-[length:100%_4px] animate-scanline" />
-                <div className="w-12 h-1 bg-slate-200 rounded-full mx-auto mb-8" />
-                <div className="space-y-4">
-                  <div className="h-8 w-3/4 bg-slate-200 rounded-lg" />
-                  <div className="h-32 w-full bg-gradient-to-br from-accent-cyan/20 to-accent-indigo/20 rounded-2xl" />
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="h-20 bg-white rounded-xl shadow-sm border border-slate-100" />
-                    <div className="h-20 bg-white rounded-xl shadow-sm border border-slate-100" />
+                
+                {/* Status Bar */}
+                <div className="flex items-center justify-between px-6 py-3 bg-white border-b border-slate-100">
+                  <span className="text-[10px] font-bold text-slate-400">9:41</span>
+                  <div className="w-16 h-5 bg-slate-900 rounded-full" />
+                  <div className="flex space-x-1">
+                    <div className="w-4 h-2 bg-slate-300 rounded-sm" />
+                    <div className="w-4 h-2 bg-slate-300 rounded-sm" />
                   </div>
-                  <div className="h-40 w-full bg-white rounded-2xl shadow-sm border border-slate-100" />
+                </div>
+
+                {/* Dashboard Content */}
+                <div className="p-4 space-y-3">
+                  {/* Header */}
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-[8px] font-bold text-slate-400 uppercase tracking-wider">Welcome back</div>
+                      <div className="text-sm font-extrabold text-slate-900">Dashboard</div>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-accent-cyan to-accent-indigo" />
+                  </div>
+
+                  {/* Revenue Card */}
+                  <div className="p-3 bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl text-white">
+                    <div className="text-[8px] font-bold opacity-60 mb-1">Total Revenue</div>
+                    <div className="text-xl font-extrabold tracking-tight">$284,392</div>
+                    <div className="flex items-center mt-2">
+                      <span className="text-[9px] font-bold text-green-400">↑ 24.5%</span>
+                      <span className="text-[8px] text-slate-400 ml-2">vs last month</span>
+                    </div>
+                  </div>
+
+                  {/* Mini Stats Grid */}
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+                      <div className="text-[8px] font-bold text-slate-400 mb-1">Users</div>
+                      <div className="text-sm font-extrabold text-slate-900">12.4K</div>
+                      <div className="text-[8px] font-bold text-green-500">+8.2%</div>
+                    </div>
+                    <div className="p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+                      <div className="text-[8px] font-bold text-slate-400 mb-1">Accuracy</div>
+                      <div className="text-sm font-extrabold text-slate-900">99.2%</div>
+                      <div className="text-[8px] font-bold text-accent-cyan">Live</div>
+                    </div>
+                  </div>
+
+                  {/* Chart Area */}
+                  <div className="p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-[8px] font-bold text-slate-400">Predictions</div>
+                      <div className="text-[8px] font-bold text-accent-cyan">This Week</div>
+                    </div>
+                    {/* Mini Bar Chart */}
+                    <div className="flex items-end gap-1 h-12">
+                      {[40, 65, 45, 80, 55, 90, 70].map((h, i) => (
+                        <div 
+                          key={i} 
+                          className="flex-1 bg-gradient-to-t from-accent-cyan to-accent-indigo rounded-sm"
+                          style={{ height: `${h}%` }}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Activity List */}
+                  <div className="p-3 bg-white rounded-xl border border-slate-100 shadow-sm">
+                    <div className="text-[8px] font-bold text-slate-400 mb-2">Recent Activity</div>
+                    <div className="space-y-2">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 rounded-full bg-green-500" />
+                        <span className="text-[8px] text-slate-600 font-medium">Model updated</span>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 rounded-full bg-accent-cyan" />
+                        <span className="text-[8px] text-slate-600 font-medium">New prediction ready</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
