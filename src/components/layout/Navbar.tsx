@@ -49,7 +49,7 @@ export default function Navbar() {
             <motion.div 
               animate={{ rotate: logoRotation }}
               transition={{ type: "spring", stiffness: 200, damping: 10 }}
-              className="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg group-hover:scale-110 transition-transform bg-slate-100"
+              className="relative w-10 h-10 overflow-hidden group-hover:scale-110 transition-transform"
             >
               <Image 
                 src="/logo.jpg" 

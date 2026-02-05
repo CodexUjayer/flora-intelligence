@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="space-y-8">
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative w-10 h-10 rounded-xl overflow-hidden shadow-lg group-hover:scale-110 transition-transform bg-slate-100">
+              <div className="relative w-10 h-10 overflow-hidden group-hover:scale-110 transition-transform">
                 <Image 
                   src="/logo.jpg" 
                   alt="Flora Logo" 
